@@ -1,6 +1,5 @@
 # https://adventofcode.com/2021/day/5
 from aocd import lines, submit
-from functools import reduce
 from collections import defaultdict
 
 _lines = '''0,9 -> 5,9
@@ -15,7 +14,6 @@ _lines = '''0,9 -> 5,9
 5,5 -> 8,2'''.strip().splitlines()
 
 # _lines = '''0,0 -> 8,8'''.strip().splitlines()
-
 
 class Line:
     def __init__(self, str):
@@ -68,15 +66,14 @@ for l in all_lines:
     for pt in l:
         field[pt] += 1
 
-xs = [x for (x, y) in field.keys()]
-ys = [y for (x, y) in field.keys()]
-min_x = 0
-max_x = max(xs)
-min_y = 0
-max_y = max(ys)
 visualize = False
-
 if visualize:
+    xs = [x for (x, y) in field.keys()]
+    ys = [y for (x, y) in field.keys()]
+    min_x = 0
+    max_x = max(xs)
+    min_y = 0
+    max_y = max(ys)
     for y in range(max_y + 1):
         for x in range(max_x + 1):
             v = field[(x, y)]
