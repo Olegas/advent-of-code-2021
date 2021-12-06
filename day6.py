@@ -1,4 +1,4 @@
-# https://adventofcode.com/2021/day/5
+# https://adventofcode.com/2021/day/6
 from aocd import data, submit
 from collections import defaultdict
 
