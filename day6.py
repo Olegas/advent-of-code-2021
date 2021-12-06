@@ -3,10 +3,14 @@ from aocd import data, submit
 from collections import defaultdict
 
 _data = '''3,4,3,1,2'''
-_numbers = [int(i) for i in _data.split(',')]
+_numbers = [int(i) for i in data.split(',')]
 
 how_often = 7
 max_turn = 80
+
+counts = defaultdict(lambda: 0)
+for i in _numbers:
+    counts[i] += 1
 
 
 def fish(offset=0, newborn=0):
@@ -27,8 +31,8 @@ def simulate(delay):
 
 
 accu = 0
-for d in _numbers:
-    accu += simulate(d)
+for (d, count) in counts.items():
+    accu += simulate(d) * count
 
 print(accu)
 
