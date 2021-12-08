@@ -1,7 +1,6 @@
 # https://adventofcode.com/2021/day/8
-from aocd import get_data, submit
+from aocd import data, submit
 
-data = get_data(day=8)
 signals_per_digit = [6, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 search_for = [
     signals_per_digit[1],

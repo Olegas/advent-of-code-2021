@@ -1,7 +1,6 @@
 # https://adventofcode.com/2021/day/8
-from aocd import get_data, submit
+from aocd import data, submit
 
-data = get_data(day=8)
 signals_per_digit = [6, 2, 5, 5, 4, 5, 6, 3, 7, 6]
 #   2, 3, 4, [5, 5, 5], [6, 6, 6], 7   <--- number of sectors
 #   1, 7, 4,             0  6  9   8   <--- actual numbers
